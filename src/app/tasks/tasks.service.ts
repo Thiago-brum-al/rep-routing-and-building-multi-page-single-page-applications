@@ -41,7 +41,7 @@ export class TasksService {
   }
 
   addTask(taskData: NewTaskData, userId: string) {
-    this.tasks.update((prevTasks) => [
+    this.tasks.update((prevTasks: any) => [
       {
         id: new Date().getTime().toString(),
         userId: userId,
@@ -55,8 +55,8 @@ export class TasksService {
   }
 
   removeTask(id: string) {
-    this.tasks.update((prevTasks) =>
-      prevTasks.filter((task) => task.id !== id)
+    this.tasks.update((prevTasks: any) =>
+      prevTasks.filter((task: any) => task.id !== id)
     );
     this.saveTasks();
   }
