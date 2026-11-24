@@ -7,6 +7,7 @@ export const routes: Routes = [
   {
     path: 'tasks',
     component: TasksComponent,
+    runGuardsAndResolvers: 'always',
     resolve: {
       userTasks: resolveUserTasks
     }
