@@ -30,7 +30,7 @@ export class TasksService {
     },
   ]);
 
-  allTasks = this.tasks.asReadonly();
+  allTasks = this.tasks;
 
   constructor() {
     const tasks = localStorage.getItem('tasks');
