@@ -5,11 +5,6 @@ import { NewTaskComponent } from "../tasks/new-task/new-task.component";
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'tasks',
-    pathMatch: 'full'
-  },
-  {
     path: 'tasks',
     component: TasksComponent,
     resolve: {
